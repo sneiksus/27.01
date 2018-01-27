@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 #include <ctime>
 using namespace std;
 
@@ -75,17 +76,30 @@ int main()
 //	for (int i = 0; i < size; i++)
 //		cout << arrB[i] << endl;
 //}
+//
+//{
+//	const int size = 5;
+//	int arrA[size], arrB[size];
+//	for (int i = 0; i < size; i++)
+//		cin >> arrA[i];
+//	arrB[0] = arrA[size-1];
+//	for (int i = 0; i < size - 1; i++)
+//	{
+//		arrB[i+1] = arrA[i];
+//	}
+//	for (int i = 0; i < size; i++)
+//		cout << arrB[i] << endl;
+//}
 
 {
-	const int size = 5;
-	int arrA[size], arrB[size];
-	for (int i = 0; i < size; i++)
-		cin >> arrA[i];
-	arrB[0] = arrA[size-1];
-	for (int i = 0; i < size - 1; i++)
+	const short cols = 5, rows = 4;
+	int arr[rows] [cols]{ {1,2},{2,4},5 };
+	for (int a = 0; a < rows; a++)
 	{
-		arrB[i+1] = arrA[i];
+		for (int b = 0; b < cols; b++)
+		{
+			cout << arr[a][b] << "\t";
+		}
+		cout << endl;
 	}
-	for (int i = 0; i < size; i++)
-		cout << arrB[i] << endl;
 }
